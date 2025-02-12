@@ -3,7 +3,7 @@ from discord.ext import commands, tasks
 from datetime import datetime
 
 # Configuration
-TOKEN = "MTMzODg3NTc2MTUzNjQwNTU3NQ.GEZgsW.SOiig8IqG0rvTIWz1jNkpggd24d7uH9ITva0rg"
+TOKEN = "votre_token"
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
