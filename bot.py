@@ -78,7 +78,7 @@ async def aide(ctx):
 # Rappel automatique toutes les 24 heures
 @tasks.loop(hours=24)
 async def rappel_devoirs():
-    canal_rappel = bot.get_channel(1339167372854169682)  # Remplace par l'ID du canal
+    canal_rappel = bot.get_channel(token_du_salon)  # Remplace par l'ID du canal
     if devoirs:
         embed = discord.Embed(
             title="\u23f0 Rappel des Devoirs",
@@ -107,7 +107,7 @@ async def rappel_semaine():
     timezone = pytz.timezone("Europe/Paris")
     maintenant = datetime.now(timezone)
     if maintenant.weekday() == 0 and maintenant.hour == 8:
-        canal_rappel = bot.get_channel(1339167372854169682)  # Remplace par l'ID du canal
+        canal_rappel = bot.get_channel(token_du_salon)  # Remplace par l'ID du canal
         semaine_actuelle = maintenant.isocalendar()[1]
         embed = discord.Embed(
             title="⏰ Rappel de la Semaine",
